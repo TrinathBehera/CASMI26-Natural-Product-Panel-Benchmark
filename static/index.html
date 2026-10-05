@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASMI Natural Product Identifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Natural Product Candidate Identifier</h2>
+        <form id="prediction-form">
+            <div class="input-group">
+                <label for="rank">Rank:</label>
+                <input type="number" step="any" id="rank" required placeholder="e.g. 5">
+            </div>
+
+            <div class="input-group">
+                <label for="rank_score">Ranker Score:</label>
+                <input type="number" step="any" id="rank_score" required placeholder="e.g. -1.57">
+            </div>
+
+            <div class="input-group">
+                <label for="pool_row">Pool Row:</label>
+                <input type="number" step="any" id="pool_row" required placeholder="e.g. -0.92">
+            </div>
+
+            <div class="input-group">
+                <label for="popularity">Popularity:</label>
+                <input type="number" step="any" id="popularity" required placeholder="e.g. 3.13">
+            </div>
+
+            <div class="input-group">
+                <label for="pool_source">Pool Source (Encoded Numeric ID):</label>
+                <input type="number" step="any" id="pool_source" required placeholder="e.g. 2">
+            </div>
+
+            <div class="input-group">
+                <label for="lib_max">Lib Max:</label>
+                <input type="number" step="any" id="lib_max" required placeholder="e.g. 1.0">
+            </div>
+
+            <button type="submit">Predict Is Truth</button>
+        </form>
+
+        <div id="result-box" class="result hidden">
+            <h3>Prediction Result:</h3>
+            <p><strong>Is Truth:</strong> <span id="is-truth-value">-</span></p>
+            <p><strong>Confidence:</strong> <span id="confidence-value">-</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

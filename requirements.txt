@@ -6,3 +6,6 @@ pyarrow #use for read paraquest file
 matplotlib
 seaborn
 xgboost
+Fastapi
+pydantic
+uvicorn
